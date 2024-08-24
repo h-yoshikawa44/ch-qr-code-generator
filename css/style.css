@@ -64,7 +64,7 @@ body {
 }
 
 .button {
-  padding: 16px 40px;
+  padding: 16px;
   font-size: 1rem;
   color: var(--button-text-color);
   background-color: var(--button-bg-color);
@@ -79,6 +79,12 @@ body {
 
 .button:focus:not(:focus-visible) {
   outline: transparent;
+}
+
+@media (width > 640px) {
+  .button {
+    padding: 16px 40px;
+  }
 }
 
 /* header
