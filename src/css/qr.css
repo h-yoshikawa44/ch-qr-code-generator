@@ -1,0 +1,48 @@
+/* header
+-------------------- */
+
+.qr-header {
+  padding: 32px 64px;
+}
+
+.qr-header__logo {
+  width: 120px;
+  height: 32px;
+}
+
+/* main
+-------------------- */
+
+.qr-main {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.qr-preview {
+  position: relative;
+}
+
+.qr-preview__bg-circle {
+  width: 312px;
+  height: 312px;
+  background-color: var(--qr-bg-circle-color);
+  border-radius: 50%;
+}
+
+.qr-preview__base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 248px;
+  height: 248px;
+  padding: 28px;
+  background-color: var(--qr-bg-color);
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.qr-actions {
+  display: flex;
+  column-gap: 32px;
+  margin-top: 64px;
+}
