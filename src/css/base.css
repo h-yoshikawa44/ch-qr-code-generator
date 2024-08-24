@@ -1,0 +1,82 @@
+/* root
+-------------------- */
+
+:root {
+  --white: #f2f5f9;
+  --gray: #364153;
+  --black: #111729;
+  --dark-black: #030617;
+  --blue: #3662e3;
+  --blue-darken: #1c4ac8;
+  --dark-blue: #1e2c51;
+  --dark-blue-alpha: #4e80ee33;
+
+  /* color map */
+  --bg-color: var(--black);
+  --bg-decoration-color: var(--dark-blue-alpha);
+  --input-bg-color: var(--dark-black);
+  --input-border-color: var(--blue);
+  --input-border-color-darken: var(--blue-darken);
+  --input-placeholder-color: var(--gray);
+  --input-text-color: var(--white);
+  --button-bg-color: var(--blue);
+  --button-bg-color-darken: var(--blue-darken);
+  --button-text-color: var(--white);
+  --qr-bg-color: var(--white);
+  --qr-bg-circle-color: var(--dark-blue);
+
+  /* font */
+  --font-base: 'Outfit', inter, system-ui, avenir, helvetica, arial, sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-base);
+  background-color: var(--bg-color);
+  background-image: url('/images/bg-illustration.svg');
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 240px);
+  background-position-y: 80px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (width > 640px) {
+  html,
+  body {
+    background-position-x: calc(50% + 272px);
+  }
+}
+
+/* common
+-------------------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+/* padding はそれぞれのボタンの CSS の方で設定 */
+.button {
+  font-size: 1rem;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 12px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-bg-color-darken);
+}
+
+.button:focus:not(:focus-visible) {
+  outline: transparent;
+}

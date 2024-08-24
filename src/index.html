@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>QR Code Generator</title>
+    <meta
+      name="description"
+      content="devChallenges.io - QR Code Generator | by h-yoshikawa44"
+    />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">
+        <img
+          class="logo"
+          src="/images/logo-qr-generator.svg"
+          alt="QRCODE logo"
+          width="150"
+          height="32"
+        />
+      </h1>
+    </header>
+    <main class="main">
+      <div class="container">
+        <form class="url-form" action="/qr">
+          <div class="url-form__input-wrapper">
+            <input
+              class="url-form__input"
+              name="url"
+              type="text"
+              placeholder="Enter a URL"
+              autocomplete="url"
+            />
+            <button class="button url-form__button" type="submit">
+              QR Code
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>

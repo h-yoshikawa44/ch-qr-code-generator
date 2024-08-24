@@ -3,6 +3,7 @@ import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 
 export default defineConfig({
+  root: './src',
   base: process.env.NODE_ENV === 'production' ? '/ch-qr-code-generator/' : './',
   server: {
     open: true,
@@ -14,6 +15,8 @@ export default defineConfig({
     },
   },
   build: {
+    base: './',
+    outDir: '../dist',
     cssMinify: 'lightningcss',
   },
 });
