@@ -2,7 +2,7 @@ pre-commit:
   parallel: true
   commands:
     html-fixer:
-      glob: '*.html'
+      glob: 'src/*.html'
       run: |
         npx markuplint --fix --problem-only {staged_files}
         npx prettier --write --log-level=error {staged_files}
@@ -11,7 +11,7 @@ pre-commit:
       skip:
         - merge
     css-fixer:
-      glob: 'css/*.css'
+      glob: 'src/css/*.css'
       run: |
         npx stylelint --fix --quiet {staged_files}
         npx prettier --write --log-level=error {staged_files}
@@ -19,7 +19,7 @@ pre-commit:
       skip:
         - merge
     js-fixer:
-      glob: 'js/*.js'
+      glob: 'src/js/*.js'
       run: |
         npx eslint --fix --quiet {staged_files}
         npx prettier --write --log-level=error {staged_files}
