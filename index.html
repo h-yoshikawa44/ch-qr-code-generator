@@ -21,9 +21,33 @@
     />
   </head>
   <body>
-    <div id="app">
-      <h1>Vite App</h1>
-    </div>
+    <header class="header">
+      <h1 class="header__title">
+        <img
+          class="logo"
+          src="/images/logo-qr-generator.svg"
+          alt="QRCODE"
+          width="150"
+          height="32"
+        />
+      </h1>
+    </header>
+    <main class="main">
+      <div class="container">
+        <form class="qr-form" action="/qr">
+          <div class="qr-form__input-wrapper">
+            <input
+              class="qr-form__input"
+              name="url"
+              type="text"
+              placeholder="Enter a URL"
+              autocomplete="url"
+            />
+            <button class="button" type="submit">QR Code</button>
+          </div>
+        </form>
+      </div>
+    </main>
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>
