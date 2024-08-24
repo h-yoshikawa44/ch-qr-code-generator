@@ -21,7 +21,7 @@
 
 .qr-main {
   padding-top: 64px;
-  padding-bottom: 64px;
+  padding-bottom: 80px;
 }
 
 .qr-preview {
@@ -70,6 +70,10 @@
 }
 
 @media (width > 640px) {
+  .qr-main {
+    padding-bottom: 120px;
+  }
+
   .qr-actions {
     column-gap: 32px;
     padding: 16px 40px;
