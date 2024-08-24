@@ -68,8 +68,16 @@
   color: var(--input-placeholder-color);
 }
 
+.url-form__button {
+  padding: 16px 20px;
+}
+
 @media (width > 640px) {
   .main {
     padding-bottom: 240px;
+  }
+
+  .url-form__button {
+    padding: 16px 40px;
   }
 }
