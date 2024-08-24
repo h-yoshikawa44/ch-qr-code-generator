@@ -40,8 +40,15 @@ body {
   background-color: var(--bg-color);
   background-image: url('/images/bg-illustration.svg');
   background-repeat: no-repeat;
-  background-position-x: 340%;
-  background-position-y: 50%;
+  background-position-x: calc(100% + 240px);
+  background-position-y: 80px;
+}
+
+@media (width > 640px) {
+  html,
+  body {
+    background-position-x: calc(50% + 272px);
+  }
 }
 
 /* common
