@@ -6,9 +6,10 @@ import '../css/qr.css';
 
 import QRCode from 'qrcode';
 
+const href = window.location.href;
+
 // アラート表示時に CSS が適用されてない状態を避けるために、DOMContentLoaded でなく load にしている
 window.addEventListener('load', () => {
-  const href = window.location.href;
   const url = new URL(href);
   const query = new URLSearchParams(url.search);
   const inputUrl = query.get('url');
@@ -59,4 +60,16 @@ window.addEventListener('load', () => {
     );
     window.location.href = '/';
   }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const urlCopyButton = document.getElementById('url-copy-button');
+
+  const urlCopy = async () => {
+    console.log('test');
+    await navigator.clipboard.writeText(href);
+    window.alert('URL Copied!');
+  };
+
+  urlCopyButton.addEventListener('click', urlCopy);
 });
