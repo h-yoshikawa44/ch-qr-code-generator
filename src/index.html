@@ -40,8 +40,11 @@
               class="url-form__input"
               name="url"
               type="text"
-              placeholder="Enter a URL"
+              placeholder="Enter a URL (e.g. https://google.com)"
               autocomplete="url"
+              required
+              pattern="https?://[\w\!\?\/\+\-_~;.,\*&@#\$%\(\)'\[\]]+"
+              title="Enter the URL where you want to generate the QR code, starting with http(s)://."
             />
             <button class="button url-form__button" type="submit">
               QR Code
