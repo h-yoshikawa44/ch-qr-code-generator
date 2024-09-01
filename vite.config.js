@@ -8,6 +8,7 @@ const root = './src';
 export default defineConfig({
   root,
   base: process.env.NODE_ENV === 'production' ? '/ch-qr-code-generator/' : './',
+  publicDir: '../public',
   server: {
     open: true,
   },
