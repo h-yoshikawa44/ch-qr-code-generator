@@ -1,9 +1,12 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 
+const root = './src';
+
 export default defineConfig({
-  root: './src',
+  root,
   base: process.env.NODE_ENV === 'production' ? '/ch-qr-code-generator/' : './',
   server: {
     open: true,
@@ -18,5 +21,11 @@ export default defineConfig({
     base: './',
     outDir: '../dist',
     cssMinify: 'lightningcss',
+    rollupOptions: {
+      input: {
+        index: resolve(root, 'index.html'),
+        qr: resolve(root, 'qr.html'),
+      },
+    },
   },
 });
