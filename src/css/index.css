@@ -69,7 +69,8 @@
 }
 
 .url-form__button {
-  padding: 16px 20px;
+  padding: 16px;
+  white-space: nowrap;
 }
 
 @media (width > 640px) {

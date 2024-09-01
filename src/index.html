@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <title>QR Code Generator</title>
@@ -34,7 +33,7 @@
     </header>
     <main class="main">
       <div class="container">
-        <form class="url-form" action="/qr">
+        <form class="url-form" action="./qr">
           <div class="url-form__input-wrapper">
             <input
               class="url-form__input"
@@ -44,7 +43,7 @@
               autocomplete="url"
               required
               pattern="https?://[\w\!\?\/\+\-_~;.,\*&@#\$%\(\)'\[\]]+"
-              title="Enter the URL where you want to generate the QR code, starting with http(s)://."
+              title="Enter the URL where you want to generate the QR code, starting with http(s)://. (URL parameters such as queries and characters other than single-byte alphanumeric characters are not supported.)"
             />
             <button class="button url-form__button" type="submit">
               QR Code
